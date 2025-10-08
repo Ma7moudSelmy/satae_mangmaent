@@ -1,0 +1,3 @@
+class CounterInit {}
+
+class CounterUpdate {}
