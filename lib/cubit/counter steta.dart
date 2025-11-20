@@ -5,7 +5,7 @@ abstract class Countersteta {
 }
 
 class CounterInit extends Countersteta {
-  CounterInit() : super(count: 10);
+  CounterInit() : super(count: 0);
 }
 
 class CounterUpdate extends Countersteta {
