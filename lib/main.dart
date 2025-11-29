@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:satae_mangmaent/cubit/counter%20cubit.dart';
-import 'package:satae_mangmaent/cubit/counter%20steta.dart';
+import 'package:satae_mangmaent/Cubit/counter%20cubit.dart' show CounterCubit;
 
 void main() {
-  runApp(BlocProvider(create: (_) => Countercubit(), child: const MyApp()));
+  runApp(BlocProvider(create: (_) => CounterCubit(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -33,8 +32,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   void _incrementCounter() {
-    // دلوقتي الـ Countercubit متاح من نفس الـ context
-    context.read<Countercubit>().increment();
+    context.read<CounterCubit>().increment();
   }
 
   @override
@@ -49,10 +47,10 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text('You have pushed the button this many times:'),
-            BlocBuilder<Countercubit, Countersteta>(
+            BlocBuilder<CounterCubit, String>(
               builder: (context, state) {
                 return Text(
-                  state.count.toString(),
+                  state.toString(),
                   style: Theme.of(context).textTheme.headlineMedium,
                 );
               },
@@ -73,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           FloatingActionButton(
             onPressed: () {
-              context.read<Countercubit>().decrement();
+              context.read<CounterCubit>().decrement();
             },
             tooltip: 'Decrement',
             child: const Icon(Icons.remove),
