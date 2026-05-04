@@ -1,13 +1,13 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CounterCubit extends Cubit<String> {
-  CounterCubit() : super('');
+  CounterCubit() : super("selmi");
 
   void increment() {
-    emit(("mahmoud"));
+    emit("mahmoud");
   }
 
   void decrement() {
-    emit(("Selmi"));
+    emit("selmi");
   }
 }
