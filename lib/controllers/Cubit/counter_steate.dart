@@ -1,7 +1,13 @@
-abstract class CounterState {
+import 'package:equatable/equatable.dart';
+
+abstract class CounterState extends Equatable {
   final int count;
 
   CounterState({required this.count});
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [count];
 }
 
 class CounterInitial extends CounterState {

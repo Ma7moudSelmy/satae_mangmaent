@@ -33,10 +33,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void _incrementCounter() {
-    context.read<CounterCubit>().increment();
-  }
-
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<CounterCubit, String>(
