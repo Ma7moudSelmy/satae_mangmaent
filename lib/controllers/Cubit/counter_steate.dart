@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 abstract class CounterState extends Equatable {
   final int count;
 
-  CounterState({required this.count});
+  const CounterState({required this.count});
 
   @override
   // TODO: implement props
@@ -15,5 +15,5 @@ class CounterInitial extends CounterState {
 }
 
 class couterupdate extends CounterState {
-  couterupdate({required int count}) : super(count: count);
+  couterupdate({required super.count});
 }

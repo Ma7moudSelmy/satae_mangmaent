@@ -9,5 +9,5 @@ class CounterInitial extends CounterState {
 }
 
 class couterupdate extends CounterState {
-  couterupdate({required int count}) : super(count: count);
+  couterupdate({required super.count});
 }
